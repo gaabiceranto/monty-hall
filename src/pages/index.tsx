@@ -3,11 +3,11 @@ import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import Gift from '../components/Gift'
 import Door from '../components/Door'
-import DoorModel from '../model/porta'
+import DoorModel from '../model/door'
 
 
 export default function Home() {
-  const p1 = new DoorModel(1)
+  const p1 = new DoorModel(1, false, true)
   const p2 = new DoorModel(2)
   const p3 = new DoorModel(3)
   return (

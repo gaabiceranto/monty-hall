@@ -1,5 +1,5 @@
 import styles from "./../styles/Door.module.css"
-import DoorModel from "../model/porta";
+import DoorModel from "../model/door";
 
 interface DoorProps{
     door:DoorModel
