@@ -4,12 +4,13 @@ import styles from '@/styles/Home.module.css'
 import Gift from '../components/Gift'
 import Door from '../components/Door'
 import DoorModel from '../model/door'
+import { useState } from 'react'
 
 
 export default function Home() {
-  const p1 = new DoorModel(1, false, true)
-  const p2 = new DoorModel(2)
-  const p3 = new DoorModel(3)
+  const [p1,setP1] = useState(new DoorModel(1))
+  const [text,setText] = useState("...")
+
   return (
     <>
       {/* <Head>
@@ -19,10 +20,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head> */}
      {/* <Gift/> */}
-     <div style={{display:"flex"}}>
-       <Door door={p1}/>
-       <Door door={p2}/>
-       <Door door={p3}/>
+     <div style={{display:"flex", flexDirection:"column"}}>
+      <input type="text" style={{color:"red"}} value={text} onChange={e =>setText(e.target.value)}/>
+       <Door value={p1} onChange={newDoor => setP1(newDoor)} />
      </div>
     </>
   )
