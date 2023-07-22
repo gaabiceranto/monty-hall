@@ -9,6 +9,7 @@ import DoorModel from '../model/porta'
 export default function Home() {
   const p1 = new DoorModel(1)
   const p2 = new DoorModel(2)
+  const p3 = new DoorModel(3)
   return (
     <>
       {/* <Head>
@@ -21,6 +22,7 @@ export default function Home() {
      <div style={{display:"flex"}}>
        <Door door={p1}/>
        <Door door={p2}/>
+       <Door door={p3}/>
      </div>
     </>
   )

@@ -1,4 +1,4 @@
-import styles from "../styles/Door.module.css"
+import styles from "./../styles/Door.module.css"
 import DoorModel from "../model/porta";
 
 interface DoorProps{
