@@ -32,7 +32,7 @@ export default class DoorModel {
         const select = !this.select
         return new DoorModel(this.number, this.haveAGift, select, this.open)
     }
-    open12(){
+    toOpen (){
         const open = true
         return new DoorModel(this.number, this.haveAGift, this.select, open)
     }
