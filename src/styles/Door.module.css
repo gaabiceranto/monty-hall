@@ -53,3 +53,10 @@
     border-top: 5px solid yellow;
     border-right: 5px solid yellow;
 }
+
+.select .number{
+    color:yellow
+}
+.select .door_handle{
+    background-color:yellow
+}
