@@ -11,8 +11,8 @@ export default function Door(props:DoorProps) {
     const door = props.value
   const select = door.select ? styles.select : ''
 
-  const changeSelection = e => props.onChange(door.changeSelection());
-  const open = e => {
+  const changeSelection = (e: any) => props.onChange(door.changeSelection());
+  const open = (e: any) => {
     e.stopPropagation()
     props.onChange(door.toOpen());
   }
