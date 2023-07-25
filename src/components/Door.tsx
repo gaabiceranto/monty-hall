@@ -8,7 +8,7 @@ interface DoorProps{
 }
 
 export default function Door(props:DoorProps) {
-    const door = props.value
+  const door = props.value
   const select = door.select && !door.open ? styles.select : ''
 
   const changeSelection = (e: any) => props.onChange(door.changeSelection());
