@@ -12,7 +12,12 @@ export function creatDoors(amount: number, select: number): DoorModel[] {
 export const updateDoors = (doors: DoorModel[], modifyDoor: DoorModel): DoorModel[] => {
   return doors.map((currentDoor) => {
     const likeAmodify = currentDoor.number === modifyDoor.number;
+    
+    if(likeAmodify){
+        return modifyDoor
+    } else {
+        return modifyDoor.open ? currentDoor : currentDoor.unselect()
+    }
 
-    return likeAmodify ? modifyDoor : currentDoor;
   });
 };
